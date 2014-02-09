@@ -24,7 +24,7 @@ gulp.task('lr-server', function() {
 })
 
 gulp.task('styles', function() {
-  return gulp.src('assets/less/style.less')
+  return gulp.src('assets/less/styles.less')
     .pipe(less())
     .pipe(minifycss())
     .pipe(rename(function (dir, base, ext) {
