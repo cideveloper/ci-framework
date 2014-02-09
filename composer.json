@@ -1,0 +1,13 @@
+{
+    "name": "cideveloper/ci-framework",
+    "authors": [
+        {
+            "name": "Darius Patel",
+            "email": "progr@mmer.ca"
+        }
+    ],
+    "require": {
+      "doctrine/dbal" : "2.3.4",
+      "anlutro/curl"  : "0.5.0"
+    }
+}
