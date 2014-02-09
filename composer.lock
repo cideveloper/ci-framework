@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "9f3bc6a0ef0aa9120588e369a69653de",
+    "hash": "ecd274fe6cd2060c0e025d15be7d6215",
     "packages": [
         {
             "name": "anlutro/curl",
@@ -43,6 +43,111 @@
             ],
             "description": "Simple OOP cURL wrapper.",
             "time": "2014-01-23 00:32:57"
+        },
+        {
+            "name": "dispatch/dispatch",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/noodlehaus/dispatch.git",
+                "reference": "cf5882f67e8aaee4e137a2c6a5fa6ecfb6acb13a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/noodlehaus/dispatch/zipball/cf5882f67e8aaee4e137a2c6a5fa6ecfb6acb13a",
+                "reference": "cf5882f67e8aaee4e137a2c6a5fa6ecfb6acb13a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.4.0"
+            },
+            "suggest": {
+                "dispatch/dispatch-extras": "Encryption, caching and more, for dispatch",
+                "dispatch/dispatch-mustache": "mustache template support within dispatch",
+                "giggleboxstudios/dispatch-handlebars": "handlebars template support within dispatch"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/dispatch.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jesus A. Domingo",
+                    "homepage": "http://noodlehaus.github.io/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Kafene",
+                    "homepage": "https://github.com/kafene",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Martin Angelov",
+                    "homepage": "https://github.com/martinaglv",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Lars",
+                    "homepage": "https://github.com/larsbo",
+                    "role": "Developer"
+                },
+                {
+                    "name": "4d47",
+                    "homepage": "https://github.com/4d47",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Bastian Widmer",
+                    "homepage": "https://github.com/dasrecht",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Lloyd Zhou",
+                    "homepage": "https://github.com/lloydzhou",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Darkalemanbr",
+                    "homepage": "https://github.com/darkalemanbr",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Amin By",
+                    "homepage": "https://github.com/xielingwang",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "Ross Masters",
+                    "homepage": "https://github.com/rmasters",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "scan",
+                    "homepage": "https://github.com/scan",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "a microframework/front-controller",
+            "homepage": "http://noodlehaus.github.io/dispatch/",
+            "keywords": [
+                "framework",
+                "micro",
+                "microframework",
+                "microphp",
+                "router"
+            ],
+            "time": "2014-02-04 16:15:07"
         },
         {
             "name": "doctrine/annotations",
@@ -521,9 +626,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "dispatch/dispatch": 20
+    },
     "platform": [
 
     ],

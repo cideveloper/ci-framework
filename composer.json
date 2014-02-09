@@ -8,6 +8,7 @@
     ],
     "require": {
       "doctrine/dbal" : "2.3.4",
-      "anlutro/curl"  : "0.5.0"
+      "anlutro/curl"  : "0.5.0",
+      "dispatch/dispatch": "dev-master"
     }
 }
