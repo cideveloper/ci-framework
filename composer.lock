@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ecd274fe6cd2060c0e025d15be7d6215",
+    "hash": "b95aee719b90367b128bba0c1cd74dd3",
     "packages": [
         {
             "name": "anlutro/curl",
