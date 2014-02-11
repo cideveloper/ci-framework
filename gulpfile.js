@@ -13,7 +13,7 @@ var lr        = require('tiny-lr');
 var server    = lr();
 var webshot   = require('webshot');
 
-gulp.task('default', ['lr-server', 'styles', 'scripts', 'watch']);
+gulp.task('default', ['lr-server', 'styles', 'scripts', 'screenshot', 'watch']);
 // Not used in this project
 // 'imageminifier', 'phpunit', 'screenshot'
 
@@ -24,38 +24,38 @@ gulp.task('lr-server', function() {
 })
 
 gulp.task('styles', function() {
-  return gulp.src('assets/less/styles.less')
+  return gulp.src('public/assets/less/styles.less')
     .pipe(less())
     .pipe(minifycss())
     .pipe(rename(function (dir, base, ext) {
         return base + ".min" + ext;
     }))
-    .pipe(gulp.dest('assets/css'))
+    .pipe(gulp.dest('public/assets/css'))
     .pipe(refresh(server));
 });
 
 gulp.task('scripts', function() {
-  return gulp.src('assets/js/src/*.js')
+  return gulp.src('public/assets/js/src/*.js')
     .pipe(uglify())
     .pipe(rename(function (dir, base, ext) {
         return base + ".min" + ext;
     }))
-    .pipe(gulp.dest('assets/js/dist'))
+    .pipe(gulp.dest('public/assets/js/dist'))
     .pipe(refresh(server));
 });
 
 gulp.task('watch', function() {
-  gulp.watch('assets/less/*.less', ['styles']);
+  gulp.watch('public/assets/less/*.less', ['styles']);
   //gulp.watch('app/tests/*Test.php', ['phpunit']);
-  gulp.watch('assets/js/src/*.js', ['scripts']);
+  gulp.watch('public/assets/js/src/*.js', ['scripts']);
   //gulp.watch('app/views/**/**', ['scripts']);
-  //gulp.watch('screenshots/watchfile.txt', ['screenshot']);
+  gulp.watch('public/assets/images/screenshots/watchfile.txt', ['screenshot']);
 });
 
 gulp.task('imageminifier', function() {
-  return gulp.src('assets/images/src/*')
+  return gulp.src('public/assets/images/src/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('assets/images/dist'));
+    .pipe(gulp.dest('public/assets/images/dist'));
 });
 
 gulp.task('phpunit', function() {
@@ -80,7 +80,7 @@ gulp.task('screenshot', function() {
       + ' AppleWebKit/531.21.20 (KHTML, like Gecko) Mobile/7B298g'
   }
 
-  webshot('588336f7.ngrok.com/framework', 'screenshots/mobile.png', options, function(err) {
+  webshot('http://localhost:8000/', 'public/assets/images/screenshots/mobile.png', options, function(err) {
     // screenshot now saved to google.png
   });
 
@@ -96,7 +96,7 @@ gulp.task('screenshot', function() {
   , userAgent: 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:25.0) Gecko/20100101 Firefox/25.0'
   }
 
-  webshot('588336f7.ngrok.com/framework', 'screenshots/desktop.png', options, function(err) {
+  webshot('http://localhost:8000/', 'public/assets/images/screenshots/desktop.png', options, function(err) {
     // screenshot now saved to google.png
   });
 
